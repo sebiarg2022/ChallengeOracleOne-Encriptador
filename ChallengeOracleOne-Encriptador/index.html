@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/estilo.css">
+  <title>Encriptador de Texto</title>
+</head>
+
+<body id="body">
+
+  <div class="header">
+    <img src="./img/Logo.jpg">
+    <h1>Encriptador de Texto</h1>
+  </div>
+
+  <div class="container">
+    <div class="container_encriptador">
+      <textarea name="textoIngresar" id="textoIngresar" cols="10" rows="10" placeholder="Ingrese el texto aquí"
+        onkeypress="return soloLetrasMinusculas(event);" required></textarea>
+      <div class="condicion_texto">
+        <img src="./img/simbolo.png">
+        <p class="leyenda">Sólo letras minúsculas y sin acentos</p>
+      </div>
+      <div class="botones_encriptar">
+        <button type="button" id="btnEncriptar" onclick="encriptarTexto()">
+          Encriptar
+        </button>
+        <button type="button" id="btnDesencriptar" onclick="desencriptarTexto()">
+          Desencriptar
+        </button>
+      </div>
+
+    </div>
+    <div class="container_desencriptador">
+      <textarea readonly="" id="textoEncriptado"> </textarea>
+      <div id="noEncontrado"><img class="imgNoEncotrada" src="./img/personaje.jpg" alt>
+        <h4>Ningún mensaje fue encontrado</h4>
+        <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+      </div>
+      <div class="boton_copiar">
+        <button type="button" id="btnCopiar" onclick="copiarTexto()">
+          Copiar
+        </button>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <footer>
+    <div> Sebastian Lucas - Oracle - Alura 2022 </div>
+  </footer>
+  <script src="js/validacion.js"></script>
+</body>
+
+</html>
